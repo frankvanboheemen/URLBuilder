@@ -20,17 +20,19 @@ extension URL {
         return components.url
     }
     
-    static func getQueryItems(from url: URL) -> [String : String] {
-        let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
-
+    static func getQueryItems(from url: URL) -> [String : String]? {
+        guard let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
+        let retreivedQueryItems = components.queryItems else {
+             return nil
+        }
+        
         var queryItems = [String: String]()
-        if let retreivedQueryItems = components?.queryItems {
-            for item in retreivedQueryItems {
-                if let value = item.value {
-                    queryItems[item.name] = value
-                }
+        for item in retreivedQueryItems {
+            if let value = item.value {
+                queryItems[item.name] = value
             }
         }
+        
         return queryItems
     }
 }

@@ -16,15 +16,16 @@ class URLBuilderTests: XCTestCase {
         let longitude = 4.9036
         let url = URL.buildURL(scheme: "locationApp", host: "place", queryItems: ["lattitude" : "\(lattitude)", "longitude": "\(longitude)"])
         
-        if let url = url {
-            let items = URL.getQueryItems(from: url)
+        if let url = url,
+            let queryItems = URL.getQueryItems(from: url) {
             
-            if let stringValue = items["lattitude"],
+            
+            if let stringValue = queryItems["lattitude"],
                 let retreivedLattitude = Double(stringValue){
                 XCTAssert(lattitude == retreivedLattitude)
             }
             
-            if let stringValue = items["longitude"],
+            if let stringValue = queryItems["longitude"],
                 let retreivedLongitude = Double(stringValue){
                 XCTAssert(longitude == retreivedLongitude)
             }
