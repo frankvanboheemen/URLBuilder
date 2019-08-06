@@ -1,6 +1,6 @@
 //
-//  URLBuilder.swift
-//  URLBuilder
+//  URL+extension.swift
+//  URL+extension
 //
 //  Created by Frank van Boheemen on 06/08/2019.
 //  Copyright © 2019 Frank van Boheemen. All rights reserved.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-class URLBuilder {
-    class func buildURL(scheme: String, host: String, queryItems: [String : String]) -> URL? {
+extension URL {
+    static func buildURL(scheme: String, host: String, queryItems: [String : String]) -> URL? {
         var components = URLComponents()
         components.scheme = scheme
         components.host = host
@@ -20,7 +20,7 @@ class URLBuilder {
         return components.url
     }
     
-    class func getQueryItems(from url: URL) -> [String : String] {
+    static func getQueryItems(from url: URL) -> [String : String] {
         let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
 
         var queryItems = [String: String]()

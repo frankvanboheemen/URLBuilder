@@ -14,10 +14,10 @@ class URLBuilderTests: XCTestCase {
     func testRetreiveQueryItemsFromCustomURLScheme() {
         let lattitude = 52.3680
         let longitude = 4.9036
-        let url = URLBuilder.buildURL(scheme: "locationApp", host: "place", queryItems: ["lattitude" : "\(lattitude)", "longitude": "\(longitude)"])
+        let url = URL.buildURL(scheme: "locationApp", host: "place", queryItems: ["lattitude" : "\(lattitude)", "longitude": "\(longitude)"])
         
         if let url = url {
-            let items = URLBuilder.getQueryItems(from: url)
+            let items = URL.getQueryItems(from: url)
             
             if let stringValue = items["lattitude"],
                 let retreivedLattitude = Double(stringValue){
