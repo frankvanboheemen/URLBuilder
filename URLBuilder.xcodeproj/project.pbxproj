@@ -14,6 +14,7 @@
 		AC3D347A22F9799C00449249 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC3D347822F9799C00449249 /* LaunchScreen.storyboard */; };
 		AC3D348522F9799C00449249 /* URLBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3D348422F9799C00449249 /* URLBuilderTests.swift */; };
 		AC3D349022F9799C00449249 /* URLBuilderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3D348F22F9799C00449249 /* URLBuilderUITests.swift */; };
+		AC3D34A022F98AEC00449249 /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3D349F22F98AEC00449249 /* URLBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		AC3D348B22F9799C00449249 /* URLBuilderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = URLBuilderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3D348F22F9799C00449249 /* URLBuilderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilderUITests.swift; sourceTree = "<group>"; };
 		AC3D349122F9799C00449249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC3D349F22F98AEC00449249 /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				AC3D346F22F9799B00449249 /* AppDelegate.swift */,
 				AC3D347122F9799B00449249 /* ViewController.swift */,
+				AC3D349F22F98AEC00449249 /* URLBuilder.swift */,
 				AC3D347322F9799B00449249 /* Main.storyboard */,
 				AC3D347622F9799C00449249 /* Assets.xcassets */,
 				AC3D347822F9799C00449249 /* LaunchScreen.storyboard */,
@@ -258,6 +261,7 @@
 			files = (
 				AC3D347222F9799B00449249 /* ViewController.swift in Sources */,
 				AC3D347022F9799B00449249 /* AppDelegate.swift in Sources */,
+				AC3D34A022F98AEC00449249 /* URLBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
